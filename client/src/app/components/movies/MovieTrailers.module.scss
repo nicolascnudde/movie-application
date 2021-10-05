@@ -1,0 +1,41 @@
+.trailers {
+  margin-top: 3rem;
+  
+  &List {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: nowrap;
+
+      overflow-x: scroll;
+
+      &Item {
+          margin-right: 1rem;
+
+          a {
+              color: #fff;
+              text-decoration: none;
+          }
+
+          &:last-child {
+              margin-right: 0;
+          }
+
+          h3 {
+            margin-top: 1rem;
+          }
+        
+          .rating {
+            display: flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            color: #757575;
+        
+            > span:last-child {
+              margin-left: 0.5rem;
+            }
+          }
+
+
+      }
+  }
+}

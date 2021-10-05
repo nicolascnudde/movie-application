@@ -1,0 +1,109 @@
+.person {
+  margin-top: 1rem;
+
+  .heroContainer {
+    .textContainer {
+      margin-top: 1rem;
+
+      > h1 {
+        text-align: center;
+      }
+
+      > p {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .heroContainer {
+      .imageContainer {
+        text-align: center;
+
+        > img {
+          width: 50%;
+        }
+      }
+    }
+  }
+  
+  &DetailsList {
+    margin-top: 2rem;
+
+    &Item {
+      display: flex;
+
+      > div:first-child {
+        flex-basis: 10rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .person {
+    .heroContainer {
+      display: flex;
+      justify-content: space-between;
+
+      .imageContainer { 
+        img {
+          width: 25rem;
+          height: 37.5rem;
+        }
+      }
+
+      .textContainer {
+        margin-top: 0;
+        flex-basis: 100%;
+        margin-left: 1rem;
+
+        > h1 {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.credits {
+  margin-top: 3rem;
+  
+  &List {
+  display: flex;
+  padding: 1rem 0;
+  overflow-x: scroll;
+
+    &Item {
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        width: 8rem;
+        height: 12rem;
+        object-fit: cover;
+      }
+
+      small {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: #505050;
+      }
+
+      @media (min-width: 64rem) {
+        img {
+          width: 12rem;
+          height: 18rem;
+          object-fit: cover;  
+        }
+
+        p {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}

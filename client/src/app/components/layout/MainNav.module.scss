@@ -1,0 +1,62 @@
+.mainNav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  border-top: 1px solid #505050;
+
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &Item {
+      padding: 1rem; 
+
+      > a,
+      button {
+        padding: 0.25rem;
+        font-size: 1.5rem;
+        color: #f58732;
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 7rem;
+    height: 100%;
+    z-index: 7;
+    border-top: none;
+    border-right: 1px solid #505050;
+
+    &List {
+      flex-direction: column;
+      justify-content: center;
+
+      &Item {
+        margin: 1rem;
+        padding: 1rem; 
+      }
+
+      &Item:nth-child(5) {
+        margin-top: 5rem;
+      }
+    }
+  }
+}

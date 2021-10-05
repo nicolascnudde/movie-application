@@ -1,0 +1,18 @@
+.btn {
+  &Primary {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 1rem;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+      border: 1px solid #000;
+    }
+  }
+}

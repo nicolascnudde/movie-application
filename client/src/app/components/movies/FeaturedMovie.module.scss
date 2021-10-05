@@ -1,0 +1,66 @@
+.featured {
+  .heroContainer {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
+    
+    .imageContainer {
+      z-index: -1;
+    }
+
+    .textContainer {
+      margin: 1rem;
+
+      .cardRating {
+        margin-top: 0.5rem;
+
+        > span:last-child {
+          margin-left: 0.5rem;
+        }
+      }
+
+      .textOverview {
+        display: none;
+      }
+    }
+  }
+  
+  @media (min-width: 64rem) {
+    .heroContainer {
+      position: relative;
+      height: 0;
+      padding-bottom: 40%;
+      background: linear-gradient(90deg, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 75%); 
+
+      .imageContainer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        height: 100%;
+        z-index: -1;
+
+        > img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .textContainer {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 40%;
+        height: 100%;
+
+        .textOverview {
+          display: block;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

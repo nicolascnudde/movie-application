@@ -1,0 +1,155 @@
+.heroContainer {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
+  
+  .imageContainer {
+    z-index: -1;
+  }
+
+  .textContainer {
+    margin: 1rem;
+
+    .cardRating {
+      margin-top: 0.5rem;
+
+      > span:last-child {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .textOverview {
+      display: none;
+    }
+  }
+}
+  
+@media (min-width: 64rem) {
+  .heroContainer {
+    position: relative;
+    height: 0;
+    padding-bottom: 40%;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%); 
+
+    .imageContainer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 70%;
+      height: 100%;
+      z-index: -1;
+
+      > img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .textContainer {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 40%;
+      height: 100%;
+
+      .textOverview {
+        display: block;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.movieDetails {
+  margin-top: 3rem;
+
+  .textOverview {
+    margin-top: 1rem;
+  }
+
+  &List {
+    margin-top: 1rem;
+
+    &Item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+
+      .leftPane {
+        flex-basis: 10rem;
+      }
+
+      .genreList {
+        display: flex;
+
+        &Item {
+          &::after {
+            content: ', ';
+            white-space: pre;
+          }
+        }
+          &Item:last-child::after {
+            content: '';
+        }
+      }
+    }
+  }
+
+  .imdbLink {
+    margin-top: 1rem;
+
+    a {
+      font-size: 2rem;
+      color: #f3ce13;
+    }
+  }
+}    
+
+@media (min-width: 64rem) {
+  .movieDetailsContainer {
+    width: 50%
+  }
+}
+  
+.cast {
+  margin-top: 3rem;
+  
+  &List {
+  display: flex;
+  padding: 1rem 0;
+  overflow-x: scroll;
+
+    &Item {
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: #fff;
+      }
+      
+      img {
+        width: 8rem;
+        height: 12rem;
+        object-fit: contain;
+      }
+
+      @media (min-width: 64rem) {
+        img {
+          width: 12rem;
+          height: 18rem;
+          object-fit: contain;
+        }
+
+      p {
+        margin-top: 0.5rem;
+      }
+      }
+    }
+  }
+}

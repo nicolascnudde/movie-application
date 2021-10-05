@@ -1,0 +1,43 @@
+.formContainer {
+  .form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: #000;
+    border: 1px solid #f58732;
+    z-index: 1;
+
+    &Init {
+      position: initial;
+    }
+
+    input {
+      width: 100%;
+      padding: 1.5rem;
+      background: none;
+      color: #f58732;
+      border: none;
+      outline: 0;
+    }
+
+    &Hidden {
+      * {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .formContainer {
+    .form {
+      margin-top: 0;
+      width: calc(100% - 7rem);
+
+      &Alt {
+        width: 100%;
+      }
+    }
+  }
+}

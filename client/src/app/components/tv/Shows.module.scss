@@ -1,0 +1,13 @@
+.shows {
+  margin-top: 3rem;
+  
+  &List {
+    padding: 1rem 0;
+    overflow-x: scroll;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    
+    list-style-type: none;
+  }
+}

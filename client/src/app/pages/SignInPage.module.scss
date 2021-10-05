@@ -1,0 +1,28 @@
+.container {
+  max-width: 50rem;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+
+  .form {
+    &Group {
+      flex-basis: 10%;
+
+      > label {
+        display: block;
+        margin-top: 1rem;
+      }
+
+      > input {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0.5rem;
+        padding: 1rem;
+        background: none;
+        border: none;
+        border: 1px solid #fff;
+        outline: 0;
+        color: #fff;
+      }
+    }
+  }
+}
